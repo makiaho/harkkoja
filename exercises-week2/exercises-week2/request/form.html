@@ -1,0 +1,14 @@
+<form method="post" action="posted.php">
+<table>
+<tr><th>Value a is integer</th><td><input type="text" name="valuea" value="234" /></td></tr>
+<tr><th>Value a is string -not html</th><td><input type="text" name="valueb" value="I say... No way, way." /></td></tr>
+<tr><th>Value is string with html</th><td>
+<textarea name="valuec">
+<h2>I say...</h2><p>No way, <span><strong>way.</strong></span></p>
+</textarea>
+</td></tr>
+
+</table>
+
+<input type="submit" />
+</form>
