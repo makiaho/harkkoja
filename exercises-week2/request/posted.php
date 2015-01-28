@@ -4,18 +4,27 @@ class RequestFacade {
 
 	public static function getInt($value) {
 		// return int or null if value is not integer
-		return $value;
+            
+    
+             if (is_numeric($value))
+             {
+                      return (int)$value;
+             }
+             else 
+             {
+                 return NULL;
+             }
 	}
 	
 	public static function getString($value) {
 		// return $value without possible html code
-		return $value;
+		return strip_tags ($value);
 	}
 	
 	public static function getHTML($value) {
 		// remove all other than allowed html. H1-H6, P, SPAN and DIV are allowed
 		
-		return $value;
+		return strip_tags ($value, '<H1><H2><H3><H4><H5><H6><P><SPAN><DIV>');
 	}
 
 }
